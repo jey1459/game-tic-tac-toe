@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe Game</title>
+    <link rel="icon" href="favicon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="notsupport">
+        <p>Your screen size is not supported</p>
+    </div>
+    <div id="container" class="container fade-in">
+        <h1>Tic Tac Toe Game</h1>
+
+        <!-- Game mode selection -->
+        <div id="modeSelection">
+            <div class="difficulty-section">
+                <h2>Single Player</h2>
+                <div class="difficulty-buttons">
+                    <button class="btn" id="easy">Easy</button>
+                    <button class="btn" id="medium">Medium</button>
+                    <button class="btn" id="impossible">Impossible</button>
+                </div>
+            </div>
+
+            <div class="multiplayer-section">
+                <h2>Two Players</h2>
+                <div class="difficulty-buttons">
+                    <button class="btn" id="twoPlayers">Two Players</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Game board (initially hidden) -->
+        <div id="gameBoard" style="display: none;">
+            <!-- Scoreboard -->
+            <div id="scoreboard" class="scoreboard">
+                <div id="playerXScore" class="score" dir="ltr">
+                    <i class="bi bi-person-fill"></i> <span contentEditable id="playerXName">Player</span>(X):<span
+                        id="scoreX">0</span>
+                </div>
+                <span id="equal" class="opacity-0">=</span>
+                <div id="playerOScore" class="score" dir="ltr">
+                    <i id="playerO-icon" class="bi bi-person-fill"></i> <span contentEditable
+                        id="playerOName">Player</span>(O):<span id="scoreO">0</span>
+                </div>
+            </div>
+
+            <!-- Game status display -->
+            <div id="status"></div>
+
+            <!-- Game board grid -->
+            <div class="board">
+                <!-- Cells will be dynamically added here -->
+            </div>
+
+            <!-- Game control buttons -->
+            <button id="reset" class="btn"><i class="bi bi-arrow-repeat"></i> Reset Game</button>
+            <button id="changeMode" class="btn"><i class="bi bi-plus-lg"></i> New Game</button>
+        </div>
+        <a href="https://github.com/jey1459" target="_blank">JeyminhooGithub</a>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
